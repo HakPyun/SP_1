@@ -33,12 +33,30 @@ class ItemRepositoryTest {
             itemRepository.save(item);
         }
     }
+
+    @Test
+    @DisplayName("JPQL 테스트")
+    public void findByDetailTest(){
+        createItemList();
+        itemRepository.findByDetail("1")
+                .forEach(System.out::println);
+    }
+
+    @Test
+    @DisplayName("Native 테스트")
+    public void findByDetailNativeTest(){
+        createItemList();
+        itemRepository.findByDetailNative("1")
+                .forEach(System.out::println);
+    }
+
     @Test
     @DisplayName("OrderBy 테스트")
     public void findByPriceLessThanOrderByPriceDescTest(){
         createItemList();
         itemRepository.findByPriceLessThanOrderByPriceDesc(10005)
                 .forEach((item -> System.out.println(item)));
+//        forEach(System.out::println);
     }
 
     @Test

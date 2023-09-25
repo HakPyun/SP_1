@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.253s</div>
+<div class="counter">1.109s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,9 +79,9 @@
 </tr>
 </thead>
 <tr>
-<td class="success">OR 테스트</td>
-<td class="success">findByItemNmOrItemDetailTest()</td>
-<td class="success">1.253s</td>
+<td class="success">Native 테스트</td>
+<td class="success">findByDetailNativeTest()</td>
+<td class="success">1.109s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,8 +89,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>10:46:15.749 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [inhatc.spring.shopjin.repository.ItemRepositoryTest]: ItemRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10:46:15.962 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration inhatc.spring.shopjin.ShopJinApplication for test class inhatc.spring.shopjin.repository.ItemRepositoryTest
+<pre>11:15:11.852 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [inhatc.spring.shopjin.repository.ItemRepositoryTest]: ItemRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:15:12.086 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration inhatc.spring.shopjin.ShopJinApplication for test class inhatc.spring.shopjin.repository.ItemRepositoryTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -100,21 +100,21 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.4)
 
-2023-09-25T10:46:16.706+09:00  INFO 3692 --- [    Test worker] i.s.s.repository.ItemRepositoryTest      : Starting ItemRepositoryTest using Java 17.0.2 with PID 3692 (started by kji99 in C:\B_Ban\shop-jin)
-2023-09-25T10:46:16.710+09:00  INFO 3692 --- [    Test worker] i.s.s.repository.ItemRepositoryTest      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2023-09-25T10:46:17.777+09:00  INFO 3692 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-25T10:46:17.869+09:00  INFO 3692 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interfaces.
-2023-09-25T10:46:18.526+09:00  INFO 3692 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-25T10:46:18.628+09:00  INFO 3692 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-09-25T10:46:18.634+09:00  INFO 3692 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-09-25T10:46:18.932+09:00  INFO 3692 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-25T10:46:19.234+09:00  INFO 3692 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-09-25T10:46:19.260+09:00  INFO 3692 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-09-25T10:46:19.551+09:00  INFO 3692 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@266da047
-2023-09-25T10:46:19.555+09:00  INFO 3692 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-09-25T10:46:19.641+09:00  WARN 3692 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2023-09-25T10:46:19.954+09:00  INFO 3692 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-25T10:46:20.914+09:00  INFO 3692 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-25T11:15:13.014+09:00  INFO 22624 --- [    Test worker] i.s.s.repository.ItemRepositoryTest      : Starting ItemRepositoryTest using Java 17.0.2 with PID 22624 (started by kji99 in C:\B_Ban\shop-jin)
+2023-09-25T11:15:13.017+09:00  INFO 22624 --- [    Test worker] i.s.s.repository.ItemRepositoryTest      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-09-25T11:15:14.071+09:00  INFO 22624 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-25T11:15:14.176+09:00  INFO 22624 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interfaces.
+2023-09-25T11:15:14.846+09:00  INFO 22624 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-25T11:15:14.943+09:00  INFO 22624 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-09-25T11:15:14.948+09:00  INFO 22624 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-25T11:15:15.192+09:00  INFO 22624 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-25T11:15:15.460+09:00  INFO 22624 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-25T11:15:15.488+09:00  INFO 22624 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-25T11:15:15.759+09:00  INFO 22624 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57416e49
+2023-09-25T11:15:15.762+09:00  INFO 22624 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-25T11:15:15.832+09:00  WARN 22624 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-25T11:15:16.204+09:00  INFO 22624 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-25T11:15:17.231+09:00  INFO 22624 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 Hibernate: 
     drop table if exists item
 Hibernate: 
@@ -138,8 +138,9 @@ Hibernate:
         name varchar(30),
         primary key (user_id)
     ) engine=InnoDB
-2023-09-25T10:46:21.010+09:00  INFO 3692 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-25T10:46:22.478+09:00  INFO 3692 --- [    Test worker] i.s.s.repository.ItemRepositoryTest      : Started ItemRepositoryTest in 6.22 seconds (process running for 8.407)
+2023-09-25T11:15:17.370+09:00  INFO 22624 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-25T11:15:18.628+09:00  INFO 22624 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-25T11:15:19.273+09:00  INFO 22624 --- [    Test worker] i.s.s.repository.ItemRepositoryTest      : Started ItemRepositoryTest in 6.833 seconds (process running for 9.47)
 Hibernate: 
     insert 
     into
@@ -212,21 +213,15 @@ Hibernate:
         (?,?,?,?,?,?,?)
 Hibernate: 
     select
-        i1_0.item_id,
-        i1_0.item_detail,
-        i1_0.item_nm,
-        i1_0.item_sell_status,
-        i1_0.price,
-        i1_0.reg_time,
-        i1_0.stock_number,
-        i1_0.update_time 
+        * 
     from
-        item i1_0 
+        item i 
     where
-        i1_0.item_nm=? 
-        or i1_0.item_detail=?
-Item(id=2, itemNm=테스트 상품2, price=10002, stockNumber=102, itemDetail=테스트 상품 상세 설명2, itemSellStatus=SELL, regTime=2023-09-25T10:46:23.418525, updateTime=2023-09-25T10:46:23.418525)
-Item(id=8, itemNm=테스트 상품8, price=10008, stockNumber=108, itemDetail=테스트 상품 상세 설명8, itemSellStatus=SELL, regTime=2023-09-25T10:46:23.472529, updateTime=2023-09-25T10:46:23.472529)
+        i.item_detail like ? 
+    order by
+        i.price asc
+Item(id=1, itemNm=테스트 상품1, price=10001, stockNumber=101, itemDetail=테스트 상품 상세 설명1, itemSellStatus=SELL, regTime=2023-09-25T11:15:20.041802, updateTime=2023-09-25T11:15:20.041802)
+Item(id=10, itemNm=테스트 상품10, price=10010, stockNumber=110, itemDetail=테스트 상품 상세 설명10, itemSellStatus=SELL, regTime=2023-09-25T11:15:20.234508, updateTime=2023-09-25T11:15:20.234508)
 </pre>
 </span>
 </div>
@@ -238,7 +233,7 @@ Item(id=8, itemNm=테스트 상품8, price=10008, stockNumber=108, itemDetail=�
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2.1</a> at 2023. 9. 25. 오전 10:46:23</p>
+<a href="http://www.gradle.org">Gradle 8.2.1</a> at 2023. 9. 25. 오전 11:15:20</p>
 </div>
 </div>
 </body>

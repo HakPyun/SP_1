@@ -21,7 +21,7 @@ public class Item {
     private Long id;
 
     @Column(nullable = false, length = 50)
-    private String itemNm;
+    private String itemNm; //대문자 있으면 끊는 듯 ex)item_nm
 
     private int price;
 
