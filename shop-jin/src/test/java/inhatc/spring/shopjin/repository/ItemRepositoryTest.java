@@ -1,7 +1,13 @@
 package inhatc.spring.shopjin.repository;
 
+import com.querydsl.core.Tuple;
+import com.querydsl.jpa.impl.JPAQuery;
+import com.querydsl.jpa.impl.JPAQueryFactory;
 import inhatc.spring.shopjin.constant.ItemSellStatus;
 import inhatc.spring.shopjin.entity.Item;
+import inhatc.spring.shopjin.entity.QItem;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import static inhatc.spring.shopjin.entity.QItem.item;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -17,6 +24,9 @@ class ItemRepositoryTest {
 
     @Autowired
     private ItemRepository itemRepository;
+
+    @Autowired
+    private EntityManager em;
 
     public void createItemList(){
         for (int i = 1; i<= 10 ; i++) {
@@ -32,6 +42,21 @@ class ItemRepositoryTest {
 
             itemRepository.save(item);
         }
+    }
+
+    @Test
+    @DisplayName("queryDsl 테스트")
+    public void querydslTest(){
+        createItemList();
+        JPAQueryFactory query = new JPAQueryFactory(em);
+
+        List<Item> itemList = query.selectFrom(item)
+                .where(item.itemSellStatus.eq(ItemSellStatus.SELL))
+                .where(item.itemDetail.like("%" + "1" + "%"))
+                .orderBy(item.price.desc())
+                .fetch();
+
+        itemList.forEach(System.out::println);
     }
 
     @Test
@@ -102,4 +127,7 @@ class ItemRepositoryTest {
         Item savedItem = itemRepository.save(item);
         System.out.println("=====================savedItem : " + savedItem);
     }
+    //과제 재고 150이상 and 아이템이름에8이 들어간
+//    @Test
+//    @DisplayName("과제 쿼리메소드")
 }
